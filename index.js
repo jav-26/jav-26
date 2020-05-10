@@ -1,23 +1,24 @@
 function clock() {
-    const hours = document.querySelector(".hours")
-    const minutes = document.querySelector(".minutes")
-    const seconds = document.querySelector(".seconds")
+    var hours = document.querySelector(".hours")
+    var minutes = document.querySelector(".minutes")
+    var seconds = document.querySelector(".seconds")
 
     hours.innerHTML = new Date().getHours();
     minutes.innerHTML = new Date().getMinutes();
     seconds.innerHTML = new Date().getSeconds();
 
     if (minutes.innerHTML.toString().length == 1) {
-        minutes.innerHTML = "0" + minutes.innerHTML;
+        minutes.innerHTML = "0" + minutes.innerText;
     }
 
     if (seconds.innerHTML.toString().length == 1) {
-        seconds.innerHTML = "0" + seconds.innerHTML;
+        seconds.innerText = "0" + seconds.innerText;
     }
 
     if (hours.innerHTML.toString().length == 1) {
         hours.innerHTML = "0" + hours.innerHTML;
     }
-
-    const interval = setInterval(clock, 1000);
 }
+setInterval(function() {
+    clock();
+}, 1000);
