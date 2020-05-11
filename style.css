@@ -269,7 +269,8 @@ section .sci li a {
         padding: 10px 25px;
     }
     section .sci {
-        left: 50px;
+        left: 20px;
+        bottom: 15px
     }
     .newsletter {
         width: 90%;
